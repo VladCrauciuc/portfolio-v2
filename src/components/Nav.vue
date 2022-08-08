@@ -1,5 +1,8 @@
 <template>
-  <ul class="my-6" v-if="windowWidth >= 1536">
+  <router-link to="/"
+    ><span>vlad</span><span class="font-bold">crauciuc</span></router-link
+  >
+  <ul class="my-6" v-if="windowWidth > 1536">
     <li class="inline">
       <router-link class="text-lg mx-4 py-2.5 px-6 hover:bg-slate-500" to="/"
         >Home</router-link
@@ -30,7 +33,7 @@
 
 <script>
 import { ref } from "@vue/reactivity";
-let windowWidth = ref("");
+let windowWidth = ref(window.innerWidth);
 export default {
   setup() {
     window.addEventListener("resize", () => {
