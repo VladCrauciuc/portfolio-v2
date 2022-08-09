@@ -1,12 +1,17 @@
 <template>
-  <div class="container mx-auto flex flex-col justify-center items-center">
-    <nav class="bg-slate-700 text-white w-screen flex justify-between">
-      <div class="container mx-auto flex justify-end">
-        <Nav />
-      </div>
-    </nav>
+  <nav
+    class="bg-[#191919] flex items-center text-white min-h-[64px] sm:min-h-[80px]"
+  >
+    <div class="container mx-auto flex justify-between items-center">
+      <Nav class="my-6" />
+    </div>
+  </nav>
+  <main
+    class="container mx-auto flex justify-center items center bg-blue-500 h-screen"
+  >
     <router-view />
-  </div>
+  </main>
+  <footer></footer>
 </template>
 
 <script>
