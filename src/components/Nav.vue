@@ -4,32 +4,32 @@
   >
   <ul v-if="windowWidth > 1024">
     <li class="inline">
-      <router-link class="text-lg mx-3 py-2 px-6 hover:bg-slate-700" to="/"
+      <router-link class="text-lg mx-3 py-2 px-6 hover:bg-gray-400" to="/"
         >Home</router-link
       >
     </li>
     <li class="inline">
-      <router-link class="text-lg mx-3 py-2 px-6 hover:bg-slate-700" to="/about"
+      <router-link class="text-lg mx-3 py-2 px-6 hover:bg-gray-400" to="/about"
         >About</router-link
       >
     </li>
     <li class="inline">
       <router-link
-        class="text-lg mx-3 py-2 px-6 hover:bg-slate-700"
+        class="text-lg mx-3 py-2 px-6 hover:bg-gray-400"
         to="/projects"
         >Projects</router-link
       >
     </li>
     <li class="inline">
       <router-link
-        class="text-lg mr-4 2xl:mr-0 ml-3 py-2 px-6 bg-orange-600"
+        class="text-lg mr-4 2xl:mr-0 ml-3 py-2 px-6 bg-orange-400"
         to="/contact"
         >Contact</router-link
       >
     </li>
   </ul>
   <span v-else class="mr-4 cursor-pointer"
-    ><i class="fa-solid fa-bars fa-xl"></i
+    ><i class="fas fa-bars fa-xl"></i
   ></span>
 </template>
 
