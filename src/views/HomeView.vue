@@ -2,7 +2,7 @@
   <section class="h-full w-full relative">
     <!-- Image -->
     <div
-      class="absolute z-10 top-8 left-1/4 w-40 h-40 rounded-full shadow-md overflow-hidden lg:w-2/6 lg:h-full lg:rounded-none lg:shadow-none bg-orange-400* lg:top-0 lg:left-0"
+      class="absolute z-10 top-8 mx-auto left-0 right-0 w-40 h-40 rounded-full shadow-md overflow-hidden lg:w-2/6 lg:h-full lg:rounded-none lg:shadow-none bg-orange-400* lg:top-0 lg:left-0"
     >
       <img
         src="./..//assets/img/me.jpg"
@@ -12,7 +12,7 @@
     </div>
     <!-- Info -->
     <div
-      class="absolute top-[118px] inset-x-0 right-1/4 w-80 h-80 px-7 shadow-md lg:shadow-none lg:w-4/6 lg:h-full lg:top-0 lg:right-0 lg:py-16 lg:px-0 flex flex-col justify-start items-center"
+      class="absolute top-[118px] mx-auto left-0 right-0 w-80 h-80 px-7 shadow-md lg:shadow-none lg:w-4/6 lg:h-full lg:top-0 lg:right-0 lg:py-16 lg:px-0 flex flex-col justify-start items-center"
     >
       <h2
         class="text-2xl mt-20 mb-4 lg:mt-0 lg:text-5xl font-semibold text-[#191919]"
