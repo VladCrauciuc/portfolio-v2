@@ -33,7 +33,7 @@ export default {
   setup() {
     const setViewHeight = () => {
       let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
+      document.documentElement.style.setProperty("height", `${vh}px`);
     };
 
     onMounted(() => {
