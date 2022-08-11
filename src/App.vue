@@ -8,7 +8,7 @@
       </div>
     </nav>
     <main
-      class="container mx-auto flex justify-center items-start flex-grow h-full py-16*"
+      class="container mx-auto flex justify-center items-start h-full py-16*"
     >
       <router-view />
     </main>
