@@ -1,5 +1,5 @@
 <template>
-  <section class="h-full w-full relative">
+  <section class="h-full w-full fixed">
     <!-- Image -->
     <div
       class="absolute z-10 top-8 mx-auto inset-x-0 w-40 h-40 rounded-full shadow-md overflow-hidden lg:w-2/6 lg:h-full lg:rounded-none lg:shadow-none bg-orange-400* lg:top-0 lg:left-0 lg:ml-0 bg-red-300"
