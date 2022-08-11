@@ -30,19 +30,7 @@ import Nav from "./components/Nav.vue";
 export default {
   name: "App",
   components: { Nav },
-  setup() {
-    const setViewHeight = () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("height", `${vh}px`);
-    };
-
-    onMounted(() => {
-      setViewHeight();
-      window.addEventListener("resize", () => {
-        setViewHeight();
-      });
-    });
-  },
+  setup() {},
 };
 </script>
 
