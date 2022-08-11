@@ -30,8 +30,18 @@ import Nav from "./components/Nav.vue";
 export default {
   name: "App",
   components: { Nav },
-  setup() {},
+  setup() {
+    document.documentElement.style.setProperty(
+      "--vh",
+      window.innerHeight * 0.01 + "px"
+    );
+  },
 };
 </script>
 
-<style></style>
+<style>
+.h-screen {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+</style>
