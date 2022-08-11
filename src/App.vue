@@ -24,12 +24,25 @@
 </template>
 
 <script>
+import { onMounted } from "@vue/runtime-core";
 import Nav from "./components/Nav.vue";
 
 export default {
   name: "App",
   components: { Nav },
-  setup() {},
+  setup() {
+    const setViewHeight = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    onMounted(() => {
+      setViewHeight();
+      window.addEventListener("resize", () => {
+        setViewHeight();
+      });
+    });
+  },
 };
 </script>
 
