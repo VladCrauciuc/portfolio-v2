@@ -30,7 +30,12 @@ import Nav from "./components/Nav.vue";
 export default {
   name: "App",
   components: { Nav },
-  setup() {},
+  setup() {
+    let navHeight = document.querySelector("nav");
+    document.documentElement.style.height = `${
+      window.innerHeight - navHeight.value
+    }px`;
+  },
 };
 </script>
 
