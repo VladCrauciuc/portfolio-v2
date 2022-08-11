@@ -15,7 +15,10 @@
     <title>Vlad Crauciuc</title>
     <style>
       #trueSize {
-        height: 100% - 64px;
+        height: 100%;
+      }
+      #app {
+        height: 100%;
       }
     </style>
   </head>
@@ -29,12 +32,5 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <script>
-      function resetHeight() {
-        document.body.style.height = `${window.innerHeight}px`;
-      }
-      window.addEventListener("resize", resetHeight);
-      resetHeight();
-    </script>
   </body>
 </html>
