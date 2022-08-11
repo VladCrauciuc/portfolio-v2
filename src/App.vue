@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto flex flex-col justify-center w-screen h-screen fixed">
+  <div class="mx-auto flex flex-col justify-center w-screen h-screen">
     <nav
       class="bg-[#191919] flex items-center text-white min-h-[64px] sm:min-h-[80px]"
     >
