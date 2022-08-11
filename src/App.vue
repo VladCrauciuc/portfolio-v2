@@ -31,10 +31,15 @@ export default {
   name: "App",
   components: { Nav },
   setup() {
-    let navHeight = document.querySelector("nav");
-    document.documentElement.style.height = `${
-      window.innerHeight - navHeight.value
-    }px`;
+    onMounted(() => {
+      let navHeight = document
+        .querySelector("nav")
+        .getBoundingClientRect().height;
+      console.log(navHeight);
+      document.documentElement.style.height = `${
+        window.innerHeight - navHeight
+      }px`;
+    });
   },
 };
 </script>
