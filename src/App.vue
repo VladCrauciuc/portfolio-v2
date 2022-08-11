@@ -30,13 +30,7 @@ import Nav from "./components/Nav.vue";
 export default {
   name: "App",
   components: { Nav },
-  setup() {
-    function resetHeight() {
-      document.body.style.height = window.innerHeight + "px";
-    }
-    window.addEventListener("resize", resetHeight);
-    resetHeight();
-  },
+  setup() {},
 };
 </script>
 
