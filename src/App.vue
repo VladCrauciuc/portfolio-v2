@@ -9,9 +9,9 @@
         <Nav
           :showMobileNav="showMobileNav"
           :windowWidth="windowWidth"
-          @lorem="toggleMobileNav()"
+          @open="toggleMobileNav"
         />
-        <MobileNav v-if="showMobileNav" @ipsum="toggleMobileNav()" />
+        <MobileNav v-if="showMobileNav" @close="toggleMobileNav" />
       </div>
     </nav>
     <main
@@ -53,9 +53,10 @@ export default {
     function toggleMobileNav() {
       if (showMobileNav.value === true) {
         showMobileNav.value = false;
-      }
-      if (showMobileNav.value === false) {
+        console.log("mobile nav is hidden");
+      } else if (showMobileNav.value === false) {
         showMobileNav.value = true;
+        console.log("mobile nav is visible");
       }
     }
 

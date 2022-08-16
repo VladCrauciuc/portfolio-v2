@@ -2,7 +2,7 @@
   <div
     class="absolute z-20 top-0 right-0 bg-[#191919] w-72 h-96 flex flex-col justify-center items-center px-4"
   >
-    <span class="mr-4 cursor-pointer" @click="$emit('ipsum', '')"
+    <span class="mr-4 cursor-pointer" @click="$emit('close')"
       ><i class="fas fa-xmark fa-2xl absolute top-8 right-4"></i
     ></span>
     <ul class="text-center block w-full">
@@ -43,7 +43,7 @@ import { ref } from "@vue/reactivity";
 import { watch } from "@vue/runtime-core";
 
 export default {
-  emits: ["ipsum"],
+  emits: ["close"],
   setup() {
     return {};
   },

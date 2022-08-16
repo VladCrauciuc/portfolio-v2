@@ -28,7 +28,7 @@
       >
     </li>
   </ul>
-  <span v-else class="mr-4 cursor-pointer" @click="$emit('lorem', '')"
+  <span v-else class="mr-4 cursor-pointer" @click="$emit('open')"
     ><i class="fas fa-bars fa-xl"></i
   ></span>
 </template>
@@ -39,14 +39,14 @@ import { watch } from "@vue/runtime-core";
 
 export default {
   props: { showMobileNav: Boolean, windowWidth: Number },
-  emits: ["lorem"],
+  emits: ["open"],
   setup(props, { emit }) {
-    watch(
-      () => props.showMobileNav,
-      () => {
-        emit("lorem", "");
-      }
-    );
+    // watch(
+    //   () => props.showMobileNav,
+    //   () => {
+    //     emit("open");
+    //   }
+    // );
     return {};
   },
 };
