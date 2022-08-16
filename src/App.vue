@@ -1,10 +1,17 @@
 <template>
   <div class="mx-auto flex flex-col justify-center w-screen h-screen">
     <nav
-      class="bg-[#191919] flex items-center text-white min-h-[64px] sm:min-h-[80px]"
+      class="bg-[#191919] flex items-center text-white min-h-[64px] sm:min-h-[80px] relative"
     >
-      <div class="container mx-auto flex justify-between items-center">
-        <Nav />
+      <div
+        class="container mx-auto flex justify-between items-center relative*"
+      >
+        <Nav
+          :showMobileNav="showMobileNav"
+          :windowWidth="windowWidth"
+          @lorem="toggleMobileNav()"
+        />
+        <MobileNav v-if="showMobileNav" @ipsum="toggleMobileNav()" />
       </div>
     </nav>
     <main
@@ -24,13 +31,36 @@
 </template>
 
 <script>
-import { onMounted } from "@vue/runtime-core";
+import { onMounted, ref } from "@vue/runtime-core";
 import Nav from "./components/Nav.vue";
+import MobileNav from "./components/MobileNav.vue";
+import vClickOutside from "click-outside-vue3";
+
+let showMobileNav = ref(false);
+let windowWidth = ref(window.innerWidth);
 
 export default {
   name: "App",
-  components: { Nav },
-  setup() {},
+  components: { Nav, MobileNav },
+  directives: {
+    clickOutside: vClickOutside.directive,
+  },
+  setup() {
+    window.addEventListener("resize", () => {
+      windowWidth.value = window.innerWidth;
+    });
+
+    function toggleMobileNav() {
+      if (showMobileNav.value === true) {
+        showMobileNav.value = false;
+      }
+      if (showMobileNav.value === false) {
+        showMobileNav.value = true;
+      }
+    }
+
+    return { showMobileNav, windowWidth, toggleMobileNav };
+  },
 };
 </script>
 

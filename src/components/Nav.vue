@@ -28,20 +28,26 @@
       >
     </li>
   </ul>
-  <span v-else class="mr-4 cursor-pointer"
+  <span v-else class="mr-4 cursor-pointer" @click="$emit('lorem', '')"
     ><i class="fas fa-bars fa-xl"></i
   ></span>
 </template>
 
 <script>
 import { ref } from "@vue/reactivity";
-let windowWidth = ref(window.innerWidth);
+import { watch } from "@vue/runtime-core";
+
 export default {
-  setup() {
-    window.addEventListener("resize", () => {
-      windowWidth.value = window.innerWidth;
-    });
-    return { windowWidth };
+  props: { showMobileNav: Boolean, windowWidth: Number },
+  emits: ["lorem"],
+  setup(props, { emit }) {
+    watch(
+      () => props.showMobileNav,
+      () => {
+        emit("lorem", "");
+      }
+    );
+    return {};
   },
 };
 </script>
