@@ -1,5 +1,8 @@
 <template>
-  <router-link class="text-3xl ml-4 2xl:ml-0 sm:text-4xl" to="/"
+  <router-link
+    @click="$emit('closeMobileNav')"
+    class="text-3xl ml-4 2xl:ml-0 sm:text-4xl"
+    to="/"
     ><span>vlad</span><span class="font-bold">crauciuc</span></router-link
   >
   <ul v-if="windowWidth > 1024">
@@ -28,7 +31,7 @@
       >
     </li>
   </ul>
-  <span v-else class="mr-4 cursor-pointer" @click="$emit('open')"
+  <span v-else class="mr-4 cursor-pointer" @click="$emit('openMobileNav')"
     ><i class="fas fa-bars fa-xl"></i
   ></span>
 </template>
@@ -39,14 +42,8 @@ import { watch } from "@vue/runtime-core";
 
 export default {
   props: { showMobileNav: Boolean, windowWidth: Number },
-  emits: ["open"],
-  setup(props, { emit }) {
-    // watch(
-    //   () => props.showMobileNav,
-    //   () => {
-    //     emit("open");
-    //   }
-    // );
+  emits: ["openMobileNav", "closeMobileNav"],
+  setup() {
     return {};
   },
 };

@@ -9,9 +9,14 @@
         <Nav
           :showMobileNav="showMobileNav"
           :windowWidth="windowWidth"
-          @open="toggleMobileNav"
+          @openMobileNav="toggleMobileNav"
+          @closeMobileNav="showMobileNav = false"
         />
-        <MobileNav v-if="showMobileNav" @close="toggleMobileNav" />
+        <MobileNav
+          v-if="showMobileNav"
+          @closeMobileNav="toggleMobileNav"
+          v-click-outside="toggleMobileNav"
+        />
       </div>
     </nav>
     <main
